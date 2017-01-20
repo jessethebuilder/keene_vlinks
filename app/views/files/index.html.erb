@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Video Links</h1>
+      <table class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Download Link</th>
+        </thead>
+
+        <tbody>
+          <% @folder.each do |file| %>
+            <tr>
+              <td><%= file_name(file) %></td>
+              <td><%= link_to file_url(file_slug(file)), file_url(file_slug(file)) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
